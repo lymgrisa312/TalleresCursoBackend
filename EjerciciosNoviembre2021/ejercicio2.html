@@ -1,0 +1,26 @@
+<script>
+	var cantidadDatos;
+	var temp1;
+	var temp2;
+	cantidadDatos = prompt("Longitud del vector:");
+	var vector = [];
+	for (let i = 0; i<cantidadDatos; i++){
+		temp1 = prompt("Ingrese valor para la posición"+i);
+		if (isNaN(temp1) == false){
+			vector [i] =temp1;
+		}else{
+			i=i-1;
+			cantidadDatos=cantidadDatos-1;
+		}
+	}
+	for (let i = 0; i<vector.length; i++){
+		for (let j = i; j<vector.length; j++){
+			if (vector[i] > vector[j]){ 
+				temp2 = vector[i];
+				vector[i] = vector[j];
+				vector [j] = temp2;
+			}
+		}
+	}
+	console.log(vector);
+</script>
