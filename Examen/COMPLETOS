@@ -1,0 +1,145 @@
+var numero1 = 5;
+var numero2 = 8;
+if(numero1<numero2) {
+console.log("numero1 no es mayor que numero2");
+}
+if(numero2>0) {
+console.log("numero2 es positivo");
+}
+if(numero1<0) {
+console.log("numero1 es negativo o distinto de cero");
+}
+if(numero1+1<numero2) {
+console.log("Incrementar en 1 unidad el valor de numero1 no lo hace mayor o igual que numero2");
+}
+
+
+<script>
+	var factorial;
+    var resultado = 1;
+    factorial = prompt("Factorial de:");	
+        for (i = 1; i<=factorial; i++){
+            resultado = i * resultado;
+        }	
+    console.log("El factorial es"+resultado);
+</script>
+
+
+var esParEntero=(numEntero)=> {
+    if (numEntero % 2 == 0) {
+        console.log("el numero ingresado es par");
+    }else {
+        console.log("el numero ingresado es impar");
+    }
+}
+esParEntero(1)
+
+<script>
+	var esPalindromo;
+	var asc;
+	var desc;
+	var pal= 0;
+	esPalindromo = prompt("Ingrese un texto");
+	var vector = [];
+	vector = esPalindromo.toLowerCase().split("").filter(c=>c!=" ");
+	for (let i = 0; i<=vector.length-1; i++){
+		asc = i;
+		desc = vector.length-i-1;
+		if (vector [asc]!=vector [desc]){
+			console.log("No es palíndromo");
+			pal= 1;
+		}
+				
+	}
+	if (pal == 0){
+		console.log("Efectivamente es palíndromo");
+		
+	}
+	console.log(vector);
+
+</script>
+
+class Persona {
+    nombre;
+    edad;
+    constructor(nombre, edad) {
+        this.nombre = nombre;
+        this.edad = edad;
+    }
+
+    obtDetalles(){
+        console.log(nombre);
+        console.log(edad);
+    }
+}
+
+
+class Estudiante extends Persona {
+    calificaci;
+    
+    constructor(calificaci, nombre, edad) {
+        this.calificaci = calificaci;
+        this.nombre = nombre;
+        this.edad = edad;
+    }
+
+    obtDetalles(){
+        console.log(nombre);
+        console.log(edad);
+        console.log(calificaci);
+    }
+}
+
+class Profesor extends Persona {
+    asignatura;
+    nivel;
+    constructor(nombre, edad, asignatura="JS", nivel="básico") {
+        this.nombre = nombre;
+        this.edad = edad;
+        this.asignatura = asignatura;
+        this.nivel = nivel;
+    }
+    obtDetalles(){
+        console.log(nombre);
+        console.log(edad);
+        console.log(asignatura);
+        console.log(nivel);
+    }
+}
+
+class Grupo extends Estudiante {
+    profesor;
+    @param {estudiantes []} estudiantes;
+    
+    
+    constructor(calificaci, nombre, edad, profesor, estudiantes) {
+        this.calificaci = calificaci;
+        this.nombre = nombre;
+        this.edad = edad;
+        this.profesor = profesor;
+        this.estudiantes = estudiantes;
+    }
+
+    califiar(){
+        for (let i = 0; i< estudiantes.length; i++){
+            estudiantes[i]=(Math.random() * 10);
+        }        
+    }
+
+    promedio(){
+        var total = 0;
+        for (let i = 0; i< estudiantes.length; i++){
+            total=estudiantes[i]+total;
+        }
+        promedio = total/estudiantes.length;
+    } 
+    
+   
+    obtDetalles(){
+        console.log(nombre);
+        console.log(edad);
+        console.log(asignatura);
+        console.log(nivel);
+    }    
+    
+}
