@@ -1,0 +1,24 @@
+<script>
+	var esPalindromo;
+	var asc;
+	var desc;
+	var pal= 0;
+	esPalindromo = prompt("Ingrese un texto");
+	var vector = [];
+	vector = esPalindromo.toLowerCase().split("").filter(c=>c!=" ");
+	for (let i = 0; i<=vector.length-1; i++){
+		asc = i;
+		desc = vector.length-i-1;
+		if (vector [asc]!=vector [desc]){
+			console.log("No es palíndromo");
+			pal= 1;
+		}
+				
+	}
+	if (pal == 0){
+		console.log("Efectivamente es palíndromo");
+		
+	}
+	console.log(vector);
+
+</script>
