@@ -108,16 +108,23 @@ class Profesor extends Persona {
 }
 
 class Grupo extends Estudiante {
-    profesor;
-    @param {estudiantes []} estudiantes;
+    profesor.nombre = "Pedro";
+    profesor.edad = 36;
     
-    
-    constructor(calificaci, nombre, edad, profesor, estudiantes) {
+    @param {estudiantes[]} Estudiante;
+    @param {edad[]} Estudiante;
+      
+    for (let i = 0; i< 6; i++){
+            estudiantes[i]=prompt("Ingrese un estudiante");
+            edad[i]=prompt("Ingrese su edad");
+    }   
+      
+    constructor(calificaci, nombre, edad, profesor, estudiante) {
         this.calificaci = calificaci;
         this.nombre = nombre;
         this.edad = edad;
         this.profesor = profesor;
-        this.estudiantes = estudiantes;
+        this.estudiantes = estudiante;
     }
 
     califiar(){
