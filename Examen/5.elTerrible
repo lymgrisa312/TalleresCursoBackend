@@ -1,0 +1,90 @@
+class Persona {
+    nombre;
+    edad;
+    constructor(nombre, edad) {
+        this.nombre = nombre;
+        this.edad = edad;
+    }
+
+    obtDetalles(){
+        console.log(nombre);
+        console.log(edad);
+    }
+}
+
+
+class Estudiante extends Persona {
+    calificaci;
+    
+    constructor(calificaci, nombre, edad) {
+        this.calificaci = calificaci;
+        this.nombre = nombre;
+        this.edad = edad;
+    }
+
+    obtDetalles(){
+        console.log(nombre);
+        console.log(edad);
+        console.log(calificaci);
+    }
+}
+
+class Profesor extends Persona {
+    asignatura;
+    nivel;
+    constructor(nombre, edad, asignatura="JS", nivel="básico") {
+        this.nombre = nombre;
+        this.edad = edad;
+        this.asignatura = asignatura;
+        this.nivel = nivel;
+    }
+    obtDetalles(){
+        console.log(nombre);
+        console.log(edad);
+        console.log(asignatura);
+        console.log(nivel);
+    }
+}
+
+class Grupo extends Estudiante {
+    profesor;
+    @param {estudiantes []} estudiantes;
+    
+    
+    constructor(calificaci, nombre, edad, profesor, estudiantes) {
+        this.calificaci = calificaci;
+        this.nombre = nombre;
+        this.edad = edad;
+        this.profesor = profesor;
+        this.estudiantes = estudiantes;
+    }
+
+    califiar(){
+        for (let i = 0; i< estudiantes.length; i++){
+            estudiantes[i]=(Math.random() * 10);
+        }        
+    }
+
+    promedio(){
+        var total = 0;
+        for (let i = 0; i< estudiantes.length; i++){
+            total=estudiantes[i]+total;
+        }
+        promedio = total/estudiantes.length;
+    } 
+    
+   
+    obtDetalles(){
+        console.log(nombre);
+        console.log(edad);
+        console.log(asignatura);
+        console.log(nivel);
+    }
+      
+    
+}
+    
+
+
+
+
